@@ -98,7 +98,7 @@ int main(void)
 				fric_off();
 			}
 			
-			else if(RC_Ctl.rc.s1 == RC_SW_UP && RC_Ctl.rc.s2 == RC_SW_DOWN)//рё©ьфВ вСио сржп ╣вел©ьжф ╣вел╦ЗкФтфл╗
+			else if(RC_Ctl.rc.s1 == RC_SW_UP && RC_Ctl.rc.s2 == RC_SW_DOWN)//рё©ьфВ вСио срdown  ╣вел©ьжф ╣вел╦ЗкФтфл╗
 			{
 				laser_off();
 			  Chassis_Task();
@@ -115,7 +115,7 @@ int main(void)
 			}
 			else if(RC_Ctl.rc.s1 == RC_SW_DOWN && RC_Ctl.rc.s2 == RC_SW_DOWN){//рё©ьфВ вСоб сржп 
 //				PWM_Write(PWM1_CH1, 1000+abs(RC_Ctl.rc.ch3-1024)*0.6f);//д╕╡абж	
-//				PWM_Write(PWM1_CH4, 1000+abs(RC_Ctl.rc.ch3-1024)*0.6f);//д╕╡абж
+//				 PWM_Write(PWM1_CH4, 1000+abs(RC_Ctl.rc.ch3-1024)*0.6f);//д╕╡абж
 //				Chassis_Task();
 					//shoot_control_loop(Fric_UP);
 					Chassis_AutoFollow(Control_data.Vx,Control_data.Vy,Control_data.Wz,Control_data.Pitch_angle,0);
