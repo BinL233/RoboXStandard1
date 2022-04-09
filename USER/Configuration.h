@@ -120,7 +120,6 @@
 #define PID_MOTOR_SPEED_I_MAX		(1500)	//»ý·Ö×î´óÖµ
 #define PID_MOTOR_SPEED_I_Err		(500)		//»ý·Ö·ÖÀëÖµ£¬²îÖµÔÚ´ËÖµÒÔÄÚ²Å½øÐÐ»ý·Ö
 //Î»ÖÃ»·pid
-
 #define PID_MOTOR_ANGLE_KP			(0.02f)
 #define PID_MOTOR_ANGLE_KI			(0.0f)
 #define PID_MOTOR_ANGLE_KD			(0.0f)
@@ -128,7 +127,7 @@
 //****************ÔÆÌ¨µç»úpid²ÎÊý************************
 //PitchÖá½ÇËÙ¶È»·
 #define PID_PITCH_SPEED_KP		(13.0f)
-//100·
+//100
 #define PID_PITCH_SPEED_KI		(0.2f)
 //1.0
 //0.5

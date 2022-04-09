@@ -100,31 +100,28 @@ int main(void)
 			
 			else if(RC_Ctl.rc.s1 == RC_SW_UP && RC_Ctl.rc.s2 == RC_SW_DOWN)//Ò£¿ØÆ÷ ×óÉÏ ÓÒÖÐ µ×ÅÌ¿ØÖÆ µ×ÅÌ¸úËæÔÆÌ¨
 			{
-        //laser_off();
-			  //Chassis_Task();
-        //shoot_control_loop(Fric_DOWN);
+				laser_off();
+			  Chassis_Task();
+//				shoot_control_loop(Fric_DOWN);
 				//Chassis_AutoFollow(Control_data.Vx,Control_data.Vy,Control_data.Wz,Control_data.Pitch_angle,0);
-				//Gimbal_Ctrl(0,Control_data.Yaw_angle,0, 0);
+				Gimbal_Ctrl(Control_data.Pitch_angle, 0,0, 0);
 			}
 			else if(RC_Ctl.rc.s1 == RC_SW_MID && RC_Ctl.rc.s2 == RC_SW_DOWN){//Ò£¿ØÆ÷ ×óÖÐ ÓÒÖÐ Ä¦²ÁÂÖ¿ªÆô ²¦µ¯ÂÖ¿ªÆô 
 //				Chassis_Task();
 //				shoot_control_loop(Fric_DOWN);
-//	      Chassis_AutoFollow(Control_data.Vx,Control_data.Vy,Control_data.Wz,Control_data.Pitch_angle,0);
-//  			Twist(float Vx, float Vy, float Wz, float pitch_angle, 50);			  	Gimbal_Ctrl(Control_data.Pitch_angle, Control_data.Yaw_angle, 0, 0);
+				Chassis_AutoFollow(Control_data.Vx,Control_data.Vy,Control_data.Wz,Control_data.Pitch_angle,0);
+//				Twist(float Vx, float Vy, float Wz, float pitch_angle, 50);
+//				Gimbal_Ctrl(Control_data.Pitch_angle, Control_data.Yaw_angle, 0);
 			}
 			else if(RC_Ctl.rc.s1 == RC_SW_DOWN && RC_Ctl.rc.s2 == RC_SW_DOWN){//Ò£¿ØÆ÷ ×óÏÂ ÓÒÖÐ 
-			
-				//PWM_Write(PWM1_CH1, 1000+abs(RC_Ctl.rc.ch3-1024)*0.6f);//Ä¦²ÁÂÖ	
-			//PWM_Write(PWM1_CH4, 1000+abs(RC_Ctl.rc.ch3-1024)*0.6f);//Ä¦²ÁÂÖ
-				
-      //Chassis_Task();
-			//shoot_control_loop(Fric_UP);
-			//Chassis_AutoFollow(Control_data.Vx,Control_data.Vy,Control_data.Wz,Control_data.Pitch_angle,0);
-			//Twist(Control_data.Vx,Control_data.Vy,Control_data.Wz,Control_data.Pitch_angle,0);
-			//Twist(float Vx, float Vy, float Wz, float pitch_angle, 50);
-			//Gimbal_Ctrl(Control_data.Pitch_angle, Control_data.Yaw_angle, 2, 0);
-			Gimbal_Ctrl(Control_data.Pitch_angle, 0, 2, 0);
-
+//				PWM_Write(PWM1_CH1, 1000+abs(RC_Ctl.rc.ch3-1024)*0.6f);//Ä¦²ÁÂÖ	
+//				PWM_Write(PWM1_CH4, 1000+abs(RC_Ctl.rc.ch3-1024)*0.6f);//Ä¦²ÁÂÖ
+//				Chassis_Task();
+					//shoot_control_loop(Fric_UP);
+					Chassis_AutoFollow(Control_data.Vx,Control_data.Vy,Control_data.Wz,Control_data.Pitch_angle,0);
+//				Twist(Control_data.Vx,Control_data.Vy,Control_data.Wz,Control_data.Pitch_angle,0);
+//				Twist(float Vx, float Vy, float Wz, float pitch_angle, 50);
+//				Gimbal_Ctrl(Control_data.Pitch_angle, Control_data.Yaw_angle, 2);
 			}
 			else if(RC_Ctl.rc.s2 == RC_SW_UP){
 				shoot_control_loop(targetSpeed);
