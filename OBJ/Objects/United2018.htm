@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\OBJ\Objects\United2018.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\OBJ\Objects\United2018.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Aug 31 13:26:10 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Apr 16 10:50:24 2022
 <BR><P>
 <H3>Maximum Stack Usage =        528 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -823,7 +823,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_Chassis_Task
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Chassis_Task
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Inverse_Kinematic_Ctrl
 </UL>
 
 <P><STRONG><a name="[b5]"></a>CAN1_Send_Msg_gimbal</STRONG> (Thumb, 108 bytes, Stack size 48 bytes, can1.o(i.CAN1_Send_Msg_gimbal))
@@ -1206,11 +1205,10 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bd]"></a>Inverse_Kinematic_Ctrl</STRONG> (Thumb, 462 bytes, Stack size 56 bytes, ctrl_chassis.o(i.Inverse_Kinematic_Ctrl))
+<P><STRONG><a name="[bd]"></a>Inverse_Kinematic_Ctrl</STRONG> (Thumb, 408 bytes, Stack size 56 bytes, ctrl_chassis.o(i.Inverse_Kinematic_Ctrl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = Inverse_Kinematic_Ctrl &rArr; motor_angle_ctrl &rArr; PID_Control &rArr; __aeabi_cdcmple
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN1_SendCommand_chassis
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_angle_ctrl
+<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_angle_ctrl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Twist
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Chassis_AutoFollow

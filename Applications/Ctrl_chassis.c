@@ -173,7 +173,7 @@ void Inverse_Kinematic_Ctrl(float Vx,float Vy,float Wz)
 	motor_speed_ctrl(n[0],n[1],n[2],n[3]);
 	#endif
 	
-	CAN1_SendCommand_chassis(motor_speed_pid[0].Control_OutPut,motor_speed_pid[1].Control_OutPut,
-														motor_speed_pid[2].Control_OutPut,motor_speed_pid[3].Control_OutPut);
+	//CAN1_SendCommand_chassis(motor_speed_pid[0].Control_OutPut,motor_speed_pid[1].Control_OutPut,
+														//motor_speed_pid[2].Control_OutPut,motor_speed_pid[3].Control_OutPut);
 }
 
