@@ -156,7 +156,7 @@ float Control_Device_LPF(float curr_inputer,Butter_BufferData *Buffer,Butter_Par
 Butter_Parameter Control_Device_Div_LPF_Parameter={
  //200---20hz
   1,    -1.14298050254,   0.4128015980962,
-  0.06745527388907,   0.1349105477781,  0.06745527388907
+  0.06745527388907,   0.1349105477781,  0.06745527388907   
 };
 
 Butter_Parameter Control_Device_Err_LPF_Parameter={

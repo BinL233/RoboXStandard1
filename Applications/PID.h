@@ -42,6 +42,7 @@ typedef struct
     float Err_LPF;
     float Last_Err_LPF;
     float Dis_Err_LPF;
+		float constant_speed;
     Butter_BufferData Control_Device_LPF_Buffer;//控制器低通输入输出缓冲
 }PID_Controler;
 

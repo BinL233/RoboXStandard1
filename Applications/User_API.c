@@ -72,7 +72,7 @@ void Stop_Chassis_Task(void)
 {
 	Astrict_Acc(0, 0, 0);//加速度限制
 	Inverse_Kinematic_Ctrl(Vx_Lpf,Vy_Lpf,Wz_Lpf);//底盘控制接口
-	CAN1_SendCommand_chassis(motor_speed_pid[0].Control_OutPut,motor_speed_pid[1].Control_OutPut,
+	CAN1_SendCommand_chassis(motor_speed_pid[0].constant_speed,motor_speed_pid[1].Control_OutPut,
 														motor_speed_pid[2].Control_OutPut,motor_speed_pid[3].Control_OutPut);
 }
 
@@ -86,7 +86,7 @@ void Stop_Chassis_Task(void)
  ****************************************************************/
 void Get_Ctrl_Data(void)
 {
-	if(RC_Ctl.rc.s2 == RC_SW_DOWN && RC_Ctl.rc.s1 == RC_SW_UP)//遥控器 左上 右中 底盘控制
+	if(RC_Ctl.rc.s2 == RC_SW_DOWN && RC_Ctl.rc.s1 == RC_SW_UP)//遥控器 左上 右down 底盘控制
 	{
 		Control_data.Vx = -(float)(RC_Ctl.rc.ch0 - 1024 + RC_ch0_Offset)/660*REMOTE_Vx_MAX;
 		Control_data.Vy = (float)(RC_Ctl.rc.ch1 - 1024 + RC_ch1_Offset)/660*REMOTE_Vy_MAX;
