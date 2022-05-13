@@ -100,11 +100,11 @@ int main(void)
 			
 			else if(RC_Ctl.rc.s1 == RC_SW_UP && RC_Ctl.rc.s2 == RC_SW_DOWN)//Ò£¿ØÆ÷ ×óÉÏ ÓÒÖĞ µ×ÅÌ¿ØÖÆ µ×ÅÌ¸úËæÔÆÌ¨
 			{
-				laser_off();
+				//laser_off();
 			  //Chassis_Task();
 				//Inverse_Kinematic_Ctrl(20,20,20);
-				shoot_control_loop(Fric_DOWN);
-				Gimbal_Ctrl(2, 0,200, 0);
+				shoot_control_loop(Fric_MID);
+				Gimbal_Ctrl(2, 0, 500, 0);
 				Chassis_AutoFollow(Control_data.Vx,Control_data.Vy,Control_data.Wz,Control_data.Pitch_angle,200);
 			}
 			else if(RC_Ctl.rc.s1 == RC_SW_MID && RC_Ctl.rc.s2 == RC_SW_DOWN){//Ò£¿ØÆ÷ ×óÖĞ ÓÒÖĞ Ä¦²ÁÂÖ¿ªÆô ²¦µ¯ÂÖ¿ªÆô 
