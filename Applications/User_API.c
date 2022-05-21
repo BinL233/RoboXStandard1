@@ -88,8 +88,8 @@ void Get_Ctrl_Data(void)
 {
 	if(RC_Ctl.rc.s2 == RC_SW_DOWN && RC_Ctl.rc.s1 == RC_SW_UP)//遥控器 左上 右down 底盘控制
 	{
-		Control_data.Vx = -(float)(RC_Ctl.rc.ch0 - 1024 + RC_ch0_Offset)/660*REMOTE_Vx_MAX;
-		Control_data.Vy = (float)(RC_Ctl.rc.ch1 - 1024 + RC_ch1_Offset)/660*REMOTE_Vy_MAX;
+		Control_data.Vx = -(float)(RC_Ctl.rc.ch1 - 1024 + RC_ch1_Offset)/660*REMOTE_Vx_MAX;
+		Control_data.Vy = (float)(RC_Ctl.rc.ch0 - 1024 + RC_ch0_Offset)/660*REMOTE_Vy_MAX;
 		Control_data.Wz = (float)(RC_Ctl.rc.ch2 - 1024 + RC_ch2_Offset)/660*REMOTE_Wz_MAX;	//角速度，单位rad/s
 		//Control_data.Yaw_angle = (float)(RC_Ctl.rc.ch2 - 1024 + RC_ch2_Offset)/2660*REMOTE_Yaw_Angle;
 		Control_data.Pitch_angle = (float)(RC_Ctl.rc.ch3 - 1024 + RC_ch3_Offset)/2660*REMOTE_Pitch_Angle;
